@@ -1,9 +1,6 @@
 <template>
     <div>
-    
-        
-    
-            <b-navbar toggleable="lg" type="dark" class=" main-navbar">
+         <b-navbar toggleable="lg" type="dark" class=" main-navbar">
                 <b-container>
                     <b-navbar>
                         <b-navbar-brand href="#">

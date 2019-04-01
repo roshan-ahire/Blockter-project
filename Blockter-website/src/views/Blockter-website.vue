@@ -1,4 +1,5 @@
 <template>
+<div>
     <div class="main-backgroung">
     <!-- use navbar componet -->
         <Navbar>
@@ -11,14 +12,19 @@
         </Navbar>
      <!-- background image start -->
         <div class=" background-poster">
-            <img src="../assets/back-poster.jpg" alt="poster">
+            
+            
+            <Formgroup>
+                </Formgroup>
             
         </div>
+    </div>
     </div>
 </template>
 
 <script>
     import Navbar from "@/components/blockter-navbar.vue";
+    import Formgroup from "@/components/blockter-form.vue";
     export default {
         data() {
             return {
@@ -58,6 +64,7 @@
     
         components: {
             Navbar,
+            Formgroup
     
         }
     };
@@ -77,12 +84,13 @@
                   color: yellow !important;
         }
         // second background poster
-        .background-poster img{
+        .background-poster{
+            background: linear-gradient(rgba(1, 1, 17, 0.864),rgba(4, 4, 29, 0.755)), url("../assets/back-poster.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
-            height: auto;
-            opacity: 0.3;
+            height: 600px;
+            
         }
     }
 </style>
