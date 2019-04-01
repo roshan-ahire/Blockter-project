@@ -11,6 +11,12 @@ export default new Router({
       name: "home",
       component: Home
     },
+      {
+      path: "/Blockter-website",
+      name: "Blockter-website",
+      component: () =>
+      import(/* webpackChunkName: "about" */ "./views/Blockter-website.vue")
+    },
     {
       path: "/about",
       name: "about",
