@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <div class="py-5">
-            <b-container>
-                <div class="card-background mx-3 ">
-                    <b-row>
-                        <b-col md=3 v-for="card in cards" v-bind:key="card.index">
-    
-                            <div>
+    <b-card>
+        <b-card-media>
+            <!-- swiper -->
+            <swiper :options="swiperOption">
+                <swiper-slide v-for="card in cards" v-bind:key="card.index">
+                    <div>
                                 <b-card overlay :img-src="card.cardimg" img-alt="Card" text-variant="white">
                                       <b-card-text class="d-flex flex-column justify-content-end">
                                                 <div class="card-img-overlay  d-flex flex-column justify-content-end">
@@ -26,22 +24,25 @@
                                 </b-card>
     
                             </div>
+                </swiper-slide>
     
-                        </b-col>
-                    </b-row>
-                </div>
-            </b-container>
-        </div>
-    </div>
+                <div class="swiper-pagination" slot="pagination"></div>
+            </swiper>
+        </b-card-media>
+    </b-card>
 </template>
 
 <script>
+import CardImg from "@/components/card-carousel.vue";
 import image1 from "../assets/ant-man.jpg";
 import image2 from "../assets/Iron-Man1.jpg";
 import image3 from "../assets/hulk.jpg";
 import image4 from "../assets/black-panther.jpg";
 
 export default {
+  components: {
+    CardImg
+  },
   data() {
     return {
       cards: [
@@ -66,13 +67,13 @@ export default {
           btn3: "SIENCE FICTION",
           name: "HULK"
         },
-        //  {
-        //   cardimg: image3,
-        //   btn1: "ACAO",
-        //   btn2: "ADVENTURE",
-        //   btn3: "SIENCE FICTION",
-        //   name: "HULK"
-        // },
+        {
+          cardimg: image3,
+          btn1: "ACAO",
+          btn2: "ADVENTURE",
+          btn3: "SIENCE FICTION",
+          name: "HULK"
+        },
         {
           cardimg: image4,
           btn1: "ACAO",
@@ -80,41 +81,44 @@ export default {
           btn3: "FANTASY",
           name: "BLACK PANTHER"
         }
-      ]
+      ],
+
+      swiperOption: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        }
+      }
     };
   }
 };
 </script>
 
-<style lang="scss">
-.card-background {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  padding-right: 20px;
-  .card-img-overlay {
-    padding: 5px;
-  }
-  .card {
-    background-color: black;
-    img {
-      opacity: 0.6;
-      height: 350px;
-    }
-    .btn1 {
-      background-color: rgb(245, 3, 52);
-      border-radius: 2px;
-      padding: 2px;
-      font-size: 11px;
-    }
-    .btn2 {
-      background-color: orangered;
-      padding: 2px;
-      border-radius: 2px;
-      margin: 3px;
-      font-size: 11px;
-    }
-  }
+<!-- Demo styles -->
+<style>
+.swiper-container {
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 </style>
-
-
-

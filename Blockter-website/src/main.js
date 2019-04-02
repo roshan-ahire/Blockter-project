@@ -5,6 +5,10 @@ import store from "./store";
 import BootstrapVue from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
+// require styles
+import "swiper/dist/css/swiper.css";
+// import Swiper from "vue-swiper";
+import VueAwesomeSwiper from "vue-awesome-swiper";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
 import {
@@ -12,7 +16,9 @@ import {
   faTh,
   faDumbbell,
   faChevronDown,
-  faSearch
+  faSearch,
+  faChevronRight,
+  faChevronUp
 
 } from "@fortawesome/free-solid-svg-icons"; //fas fa
 
@@ -24,6 +30,7 @@ import {
   faYoutube,
   faInstagram,
   faDribbble
+ 
 } from "@fortawesome/free-brands-svg-icons"; //fab
 
 import { faCommentAlt } from "@fortawesome/free-regular-svg-icons";
@@ -36,10 +43,11 @@ library.add(
   faTh,
   faDumbbell,
   faChevronDown,
-  faSearch
-  
-); //fas
+  faSearch,
+  faChevronRight,
+  faChevronUp
 
+); //fas
 library.add(faCommentAlt); //far
 
 library.add(
@@ -54,6 +62,9 @@ library.add(
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(BootstrapVue);
+// Vue.use(Swiper);
+Vue.use(VueAwesomeSwiper);
+
 
 Vue.config.productionTip = false;
 
