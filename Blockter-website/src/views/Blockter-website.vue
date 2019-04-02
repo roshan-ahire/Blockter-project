@@ -16,8 +16,9 @@
                 <Formgroup>
                 </Formgroup>
                 <!-- using component -->
-                <CardImg>
-                    </CardImg>
+                <!-- <CardImg>
+                    </CardImg> -->
+                    <swiper1/>
                 <!-- <swiper1/> -->
 
     
