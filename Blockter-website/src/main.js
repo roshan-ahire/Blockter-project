@@ -12,6 +12,7 @@ import {
   faTh,
   faDumbbell,
   faChevronDown,
+  faSearch
 
 } from "@fortawesome/free-solid-svg-icons"; //fas fa
 
@@ -35,6 +36,7 @@ library.add(
   faTh,
   faDumbbell,
   faChevronDown,
+  faSearch
   
 ); //fas
 

@@ -1,30 +1,33 @@
 <template>
-<div>
-    <div class="main-backgroung">
-    <!-- use navbar componet -->
-        <Navbar>
-            <b-nav-item href="#" slot="navlinks" v-for="link in navlinks" v-bind:key="link.index">
-                <span class="small font-weight-bold"> {{link.name}}</span>
-                <span style="color:#fff" v-if="link.icon">
-                         <font-awesome-icon :icon="['fas', 'chevron-down']" class="ml-1 small arrow-hover"/>
-                     </span>
-            </b-nav-item>
-        </Navbar>
-     <!-- background image start -->
-        <div class=" background-poster">
-            
-            
-            <Formgroup>
+    <div>
+        <div class="main-backgroung">
+            <!-- use navbar componet -->
+            <Navbar>
+                <b-nav-item href="#" slot="navlinks" v-for="link in navlinks" v-bind:key="link.index">
+                    <span class="small font-weight-bold"> {{link.name}}</span>
+                    <span style="color:#fff" v-if="link.icon">
+                                 <font-awesome-icon :icon="['fas', 'chevron-down']" class="ml-1 small arrow-hover"/>
+                             </span>
+                </b-nav-item>
+            </Navbar>
+            <!-- background image start -->
+            <div fluid alt="Responsive image" class=" background-poster">
+                <!-- using component -->
+                <Formgroup>
                 </Formgroup>
-            
+                
+                <CardImg>
+                </CardImg>
+            </div>
         </div>
-    </div>
     </div>
 </template>
 
 <script>
     import Navbar from "@/components/blockter-navbar.vue";
     import Formgroup from "@/components/blockter-form.vue";
+    import CardImg from "@/components/card-carousel.vue";
+    
     export default {
         data() {
             return {
@@ -64,7 +67,8 @@
     
         components: {
             Navbar,
-            Formgroup
+            Formgroup,
+            CardImg
     
         }
     };
@@ -80,17 +84,16 @@
         .nav-link:hover {
             color: yellow !important;
         }
-        .arrow-hover:hover{
-                  color: yellow !important;
+        .arrow-hover:hover {
+            color: yellow !important;
         }
         // second background poster
-        .background-poster{
-            background: linear-gradient(rgba(1, 1, 17, 0.864),rgba(4, 4, 29, 0.755)), url("../assets/back-poster.jpg");
+        .background-poster {
+            background: linear-gradient(rgba(1, 1, 17, 0.864), rgba(4, 4, 29, 0.755)), url("../assets/back-poster.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             width: 100%;
             height: 600px;
-            
         }
     }
 </style>
