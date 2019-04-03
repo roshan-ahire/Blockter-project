@@ -1,7 +1,7 @@
 <template>
     <div>
         <b-container>
-            <div class=" content-border mx-3">
+            <div class=" content-border mx-3 ">
             <b-row class="mx-auto">
                 
                 <b-col md=2 class="p-0">

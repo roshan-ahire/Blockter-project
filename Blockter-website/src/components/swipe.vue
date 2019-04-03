@@ -32,6 +32,8 @@
       
         </div>
         <div class="swiper-pagination" slot="pagination"></div>
+         <!-- <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div> -->
     </b-container>
     </div>
   </div>
@@ -43,6 +45,9 @@ import image1 from "../assets/ant-man.jpg";
 import image2 from "../assets/Iron-Man1.jpg";
 import image3 from "../assets/hulk.jpg";
 import image4 from "../assets/black-panther.jpg";
+import image5 from "../assets/captain-marve.jpg";
+import image6 from "../assets/captain-america.jpg";
+import image7 from "../assets/civil-war.jpg";
 
 export default {
   components: {
@@ -72,28 +77,67 @@ export default {
           btn3: "SIENCE FICTION",
           name: "HULK"
         },
-        {
-          cardimg: image3,
-          btn1: "ACAO",
-          btn2: "ADVENTURE",
-          btn3: "SIENCE FICTION",
-          name: "HULK"
-        },
+     
         {
           cardimg: image4,
           btn1: "ACAO",
           btn2: "ADVENTURE",
           btn3: "FANTASY",
           name: "BLACK PANTHER"
-        }
+        },
+           {
+          cardimg: image5,
+          btn1: "ACAO",
+          btn2: "ADVENTURE",
+          btn3: "SIENCE FICTION",
+          name: "CAPTAIN MARVEL"
+        },
+          {
+          cardimg: image6,
+          btn1: "ACAO",
+          btn2: "ADVENTURE",
+          btn3: "SIENCE FICTION",
+          name: "CAPTAIN AMERICA"
+        },
+          {
+          cardimg: image7,
+          btn1: "ACAO",
+          btn2: "ADVENTURE",
+          btn3: "SIENCE FICTION",
+          name: "CIVIL WAR"
+        },
       ],
 
       swiperOption: {
+        // direction:"vertical",
+
         slidesPerView: 4,
         spaceBetween: 30,
         pagination: {
           el: ".swiper-pagination",
           clickable: true
+        },
+          breakpoints: {
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 40
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20
+            },
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10
+            }
+          },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
         }
       }
     };
@@ -103,7 +147,6 @@ export default {
 
 <!-- Demo styles -->
 <style lang="scss">
-
 .card-background {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   padding-right: 20px;
@@ -131,32 +174,26 @@ export default {
     }
   }
 }
+
 .swiper-pagination-bullet-active {
-    opacity: 1;
-    /* font-size: 20px; */
-    background: #ffc107;
-    /* padding: 5px; */
-    /* right: 50px; */
-    /* float: right; */
+  opacity: 1;
+  /* font-size: 20px; */
+  background: #ffc107 !important;
+  /* padding: 5px; */
+  /* right: 50px; */
+  /* float: right; */
 }
-.swiper-pagination-bullet-active {
-    opacity: 1;
-    /* font-size: 20px; */
-    background: #ffc107 !important;
-    /* padding: 5px; */
-    /* right: 50px; */
-    /* float: right; */
-}
-    .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    /* padding: 5px; */
-    border-radius: 100%;
-    background: #000;
-    opacity: 1;
-    position: relative;
-    
-    /* padding-left: 10px; */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  /* padding: 5px; */
+  border-radius: 100%;
+  background: rgb(245, 242, 242);
+  opacity: 0.7;
+  position: relative;
+ 
+
+  /* padding-left: 10px; */
 }
 </style>

@@ -16,9 +16,9 @@
                 <Formgroup>
                 </Formgroup>
                 <!-- using component -->
-                <CardImg>
-                    </CardImg>
-                    <!-- <swiper1/> -->
+                <!-- <CardImg>
+                    </CardImg> -->
+                    <swiper1/>
                 <!-- <swiper1/> -->
 
     
@@ -28,6 +28,8 @@
             <IframeVideo>
     
             </IframeVideo>
+            <Findus>
+              </Findus>
       
         </div>
     
@@ -41,6 +43,7 @@ import Formgroup from "@/components/blockter-form.vue";
 import CardImg from "@/components/card-carousel.vue";
 import IframeVideo from "@/components/iframe-content.vue";
 import swiper1 from "@/components/swipe.vue";
+import Findus from "@/components/find-us.vue";
 
 export default {
   data() {
@@ -90,14 +93,15 @@ export default {
     Formgroup,
     CardImg,
     IframeVideo,
-    swiper1
+    swiper1,
+    Findus
   }
 };
 </script>
 
 <style lang="scss">
 .main-backgroung {
-  background-color: #111014;
+  background-color: #020d18 !important;
   height: 3000px;
   .nav-link {
     color: rgba(255, 255, 255, 0.75) !important;

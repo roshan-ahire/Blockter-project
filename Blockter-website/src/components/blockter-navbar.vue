@@ -35,7 +35,7 @@
 
 <style lang="scss">
     .main-navbar {
-        background-color: rgb(2, 2, 7);
+        background-color: #020d18;
     }
     
     .btn-color {

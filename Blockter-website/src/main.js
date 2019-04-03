@@ -5,7 +5,7 @@ import store from "./store";
 import BootstrapVue from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-// require styles
+// require styles css
 import "swiper/dist/css/swiper.css";
 // import Swiper from "vue-swiper";
 import VueAwesomeSwiper from "vue-awesome-swiper";
@@ -18,7 +18,8 @@ import {
   faChevronDown,
   faSearch,
   faChevronRight,
-  faChevronUp
+  faChevronUp,
+
 
 } from "@fortawesome/free-solid-svg-icons"; //fas fa
 
@@ -45,7 +46,8 @@ library.add(
   faChevronDown,
   faSearch,
   faChevronRight,
-  faChevronUp
+  faChevronUp,
+ 
 
 ); //fas
 library.add(faCommentAlt); //far
@@ -62,7 +64,7 @@ library.add(
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(BootstrapVue);
-// Vue.use(Swiper);
+// (Swiper);
 Vue.use(VueAwesomeSwiper);
 
 
