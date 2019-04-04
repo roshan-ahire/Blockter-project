@@ -3,7 +3,7 @@
     <div class="main-backgroung">
       <!-- use navbar componet -->
       <Navbar>
-        <b-nav-item href="#" slot="navlinks" v-for="link in navlinks" v-bind:key="link.index">
+        <b-nav-item href="#" slot="navlinks" v-for="link in navlinks" v-bind:key="link.index" v-scroll-to="link.divid">
           <span class="small font-weight-bold"> 
                         {{link.name}}
                         </span>
@@ -15,8 +15,10 @@
       <!-- background image start -->
       <div class=" background-poster pb-5">
         <!-- using component -->
+        <div id="home">
         <Formgroup>
         </Formgroup>
+        </div>
         <!-- using component -->
         <!-- <CardImg>
                       </CardImg> -->
@@ -25,16 +27,23 @@
       </div>
   
       <!-- using component -->
+      <div id="movies">
       <IframeVideo>
   
       </IframeVideo>
+      </div>
       <!-- using component -->
+      <div id="tvshows">
       <Findus>
       </Findus>
+      </div>
       <!-- using component -->
+       <div id="news">
       <div class="footer-poster">
+       
         <Footer>
         </Footer>
+      </div>
       </div>
       <!-- using component -->
      
@@ -62,28 +71,28 @@
         navlinks: [{
             name: "HOME",
             icon: true,
-            divid: "#welcome"
+            divid: "#home"
           },
           {
             name: "MOVIES",
             icon: true,
-            divid: "#landing"
+            divid: "#movies"
           },
   
           {
             name: "TVSHOWS",
             icon: true,
-            divid: "#documentation"
+            divid: "#tvshows"
           },
           {
             name: "CELEBRITIES",
             icon: true,
-            divid: "#purchase"
+            divid: "#celebrities"
           },
           {
             name: "NEWS",
             icon: true,
-            divid: "#documentation"
+            divid: "#news"
           }
         ]
       };

@@ -10,6 +10,9 @@ import "swiper/dist/css/swiper.css";
 // import Swiper from "vue-swiper";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import { library } from "@fortawesome/fontawesome-svg-core";
+// scroll spy
+var VueScrollTo = require('vue-scrollto');
+
 
 import {
   faCaretDown,
@@ -63,6 +66,14 @@ library.add(
   faInstagram,
   faDribbble
 ); //fab
+
+Vue.use(VueScrollTo, {
+  container: "body",
+  duration: 2000,
+  easing: "ease",
+  offset: 0,
+
+})
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(BootstrapVue);

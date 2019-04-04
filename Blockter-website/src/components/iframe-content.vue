@@ -41,7 +41,7 @@
                                             </b-media>
                                         </div>
                                     </swiper-slide>
-                                    <div class="swiper-pagination" slot="pagination"></div>
+                                    <div class="swiper-pagination icon" slot="pagination"></div>
                                 </swiper>
     
                                
@@ -131,6 +131,11 @@ export default {
   }
   .decorate {
     text-decoration: none;
+  }
+  .icon{
+      position: relative !important;
+      bottom: 450px !important;
+      left:30px;
   }
 }
 </style>

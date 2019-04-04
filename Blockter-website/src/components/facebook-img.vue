@@ -5,14 +5,23 @@
         FIND US ON FACEBOOK
         </div>
         <div>
-             <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" name="iframe_a" allowfullscreen></b-embed>
+              <figure>
+                <!-- <img src="../assets/fanpage.png" class="" alt=""> -->
+                <b-img :src="img" fluid alt="Fluid image"></b-img>
+            </figure>
+             <!-- <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" name="iframe_a" allowfullscreen></b-embed> -->
         </div>
       
     </div>
 </template>
 <script>
+import images1 from "../assets/fb1.png";
 export default {
-    
+    data() {
+        return{
+            img:images1,
+        };
+    }
 }
 </script>
 <style lang="scss">

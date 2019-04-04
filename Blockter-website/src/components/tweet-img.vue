@@ -8,14 +8,23 @@
         </div>
         </div>
         <div>
-             <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" name="iframe_a" allowfullscreen></b-embed>
+            <figure>
+                <!-- <img src="../assets/fanpage.png" class="" alt=""> -->
+                <b-img :src="img1" fluid alt="Fluid image"></b-img>
+            </figure>
+             <!-- <b-embed type="iframe" aspect="16by9" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" name="iframe_a" allowfullscreen></b-embed> -->
         </div>
       
     </div>
 </template>
 <script>
+import images1 from "../assets/twiteer1.jpg";
 export default {
-    
+    data() {
+        return{
+            img1:images1,
+        };
+    }
 }
 </script>
 <style lang="scss">
@@ -33,6 +42,6 @@ export default {
     }
 }
 .tweet-content{
-    margin-top: 150px;
+    margin-top: 50px;
 }
 </style>

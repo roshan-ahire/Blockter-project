@@ -194,10 +194,8 @@ export default {
   opacity: 1;
   /* font-size: 20px; */
   background: yellow!important;
-  /* padding: 5px; */
-  /* right: 50px; */
-  /* float: right; */
-  margin-left: 5px;
+ 
+
 }
 .swiper-pagination-bullet {
   width: 11px;

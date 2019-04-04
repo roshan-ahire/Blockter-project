@@ -35,7 +35,8 @@
 <style lang="scss">
     .all-content{
  
-margin: 100px 0;
+margin-top: 100px;
+margin-bottom: 50px;
     }
 </style>
 

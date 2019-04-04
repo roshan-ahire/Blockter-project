@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="text-white">
+            <div class="pt-3">
             <b-media tag="li" class="my-5 main-media">
                 <b-img slot="aside" :src="img1" width="180" height="100" alt="placeholder"></b-img>
                 <div class="text-left pt-5  title-1">
@@ -15,6 +16,7 @@
                     Joss Whedon has a little bit of a history with superhero movies, and for creating layered female characters. After his documented frustrations with Wonder Woman, he’s getting
                 </div>
             </b-media>
+            </div>
         </div>
         <div class="my-5">
             <b-row>
