@@ -92,20 +92,20 @@ export default {
           btn3: "SIENCE FICTION",
           name: "CAPTAIN MARVEL"
         },
-          {
-          cardimg: image6,
-          btn1: "ACAO",
-          btn2: "ADVENTURE",
-          btn3: "SIENCE FICTION",
-          name: "CAPTAIN AMERICA"
-        },
-          {
-          cardimg: image7,
-          btn1: "ACAO",
-          btn2: "ADVENTURE",
-          btn3: "SIENCE FICTION",
-          name: "CIVIL WAR"
-        },
+        //   {
+        //   cardimg: image6,
+        //   btn1: "ACAO",
+        //   btn2: "ADVENTURE",
+        //   btn3: "SIENCE FICTION",
+        //   name: "CAPTAIN AMERICA"
+        // },
+        //   {
+        //   cardimg: image7,
+        //   btn1: "ACAO",
+        //   btn2: "ADVENTURE",
+        //   btn3: "SIENCE FICTION",
+        //   name: "CIVIL WAR"
+        // },
       ],
 
       swiperOption: {
@@ -135,10 +135,10 @@ export default {
               spaceBetween: 10
             }
           },
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false
-        }
+        // autoplay: {
+        //   delay: 2500,
+        //   disableOnInteraction: false
+        // }
       }
     };
   }
@@ -174,24 +174,41 @@ export default {
     }
   }
 }
+.swiper-pagination {
+    /* position: absolute; */
+    text-align: center;
+    -webkit-transition: 300ms opacity;
+    -o-transition: 300ms opacity;
+    transition: 300ms opacity;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+    float: right;
+    position: relative !important;
+    margin-top: 20px;
+    margin-right: 50px;
+    
+}
 
 .swiper-pagination-bullet-active {
   opacity: 1;
   /* font-size: 20px; */
-  background: #ffc107 !important;
+  background: yellow!important;
   /* padding: 5px; */
   /* right: 50px; */
   /* float: right; */
+  margin-left: 5px;
 }
 .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   display: inline-block;
   /* padding: 5px; */
   border-radius: 100%;
   background: rgb(245, 242, 242);
-  opacity: 0.7;
+  opacity: 1;
   position: relative;
+  margin-right: 5px;
  
 
   /* padding-left: 10px; */

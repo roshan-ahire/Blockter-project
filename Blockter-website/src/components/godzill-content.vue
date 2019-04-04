@@ -21,29 +21,30 @@
                 <b-col>
                     <div class="text-left text-white font-weight-bold ">More news on Blockbuster</div>
                     <div class="mt-5 title-1 text-left">Godzilla: King Of The Monsters Adds O’Shea Jackson Jr O’Shea Jackson Jr O’Shea Jackson Jr span</div>
-                    <div class="small text-left text-white">1 year ago</div>
-                   
+                    <div class="small text-left text-white year-text">1 year ago</div>
+    
                 </b-col>
                 <b-col>
                     <div class="text-right small textc pr-3">SEE ALL MOVIES NEWS <span> <font-awesome-icon :icon="['fas', 'chevron-right']" class="small text-white"/></span></div>
                     <div class="mt-5 title-1 text-left">Magnolia Nabs ‘Lucky’ Starring Harry Dean Stanton</div>
-                    <div class="small text-left text-white">1 year ago</div>
-                 
+                    <div class="small text-left text-white year-text">1 year ago</div>
+    
                 </b-col>
             </b-row>
-              <b-row>
+            <!-- ************ -->
+            <b-row>
                 <b-col>
-                    
-                    
+    
+    
                     <div class="mt-4 title-1 text-left">‘Going in Style’ Tops ‘Smurfs: The Lost Village’ at Thursday Box Office</div>
-                    <div class="small text-left text-white">1 year ago</div>
+                    <div class="small text-left text-white year-text">1 year ago</div>
                 </b-col>
                 <b-col>
-                   
-                    
+    
+    
                     <div class="mt-4 title-1 text-left">India’s National Film Awards: ‘Kaasav’ Wins Best Picture
                     </div>
-                    <div class="small text-left text-white">1 year ago</div>
+                    <div class="small text-left text-white year-text">1 year ago</div>
                 </b-col>
             </b-row>
         </div>
@@ -84,6 +85,7 @@
         }
     }
     
+    // ******************
     .textc {
         color: #8b96a3 !important;
         font-weight: bold;
@@ -94,5 +96,9 @@
         color: #497dc3;
         line-height: 27px;
         font-size: 12px;
+    }
+    
+    .year-text {
+        color: #8b96a3 !important;
     }
 </style>

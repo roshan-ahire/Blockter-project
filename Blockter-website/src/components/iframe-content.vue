@@ -3,7 +3,7 @@
         <div class="iframe-background">
             <div class="pt-5">
                 <b-container>
-                    <b-row>
+                    <b-row class="mx-3">
                         <b-col md="8" class="p-0">
                             <div class="font-weight-bold text-left pt-5">
                                 <div class="text-white">IN THEATER</div>
@@ -32,7 +32,7 @@
                                
                                 <swiper :options="swiperOption">
                                     <swiper-slide v-for="link in navlinks" v-bind:key="link.index">
-                                        <div >
+                                        <div>
                                             <b-media tag="li" class="my-3 text-white pl-3 effect">
                                                 <b-img slot="aside" height="75" :src="link.img1" alt="placeholder"></b-img>
                                                 <p class="mb-0 text-left pt-3 small font-weight-bold">
@@ -113,9 +113,9 @@ export default {
 
 <style lang="scss">
 .iframe-background {
-  background:  #06121e !important;
-  .view1{
-      color: #8b96a3 !important;
+  background: #06121e !important;
+  .view1 {
+    color: #8b96a3 !important;
   }
   .object-color {
     background: #051227;
@@ -123,18 +123,16 @@ export default {
     height: 428px;
     overflow: hidden;
   }
-  .swiper-slide{
+  .swiper-slide {
     height: 100% !important;
-}
-.effect:hover{
+  }
+  .effect:hover {
     background-color: #1c395f !important;
-
-}
-.decorate{
+  }
+  .decorate {
     text-decoration: none;
+  }
 }
-}
-
 </style>
 
 

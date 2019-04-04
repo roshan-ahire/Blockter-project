@@ -2,7 +2,7 @@
     <div>
         <div class=" all-content">
             <b-container>
-                <b-row>
+                <b-row class="mx-1">
                     <b-col md=8>
                         <Godzillcontent>
                         </Godzillcontent>

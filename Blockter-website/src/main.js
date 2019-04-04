@@ -19,6 +19,7 @@ import {
   faSearch,
   faChevronRight,
   faChevronUp,
+  faArrowUp
 
 
 } from "@fortawesome/free-solid-svg-icons"; //fas fa
@@ -47,6 +48,7 @@ library.add(
   faSearch,
   faChevronRight,
   faChevronUp,
+  faArrowUp
  
 
 ); //fas
