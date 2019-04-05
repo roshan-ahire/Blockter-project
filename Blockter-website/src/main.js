@@ -11,8 +11,7 @@ import "swiper/dist/css/swiper.css";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import { library } from "@fortawesome/fontawesome-svg-core";
 // scroll spy
-var VueScrollTo = require('vue-scrollto');
-
+var VueScrollTo = require("vue-scrollto");
 
 import {
   faCaretDown,
@@ -23,8 +22,6 @@ import {
   faChevronRight,
   faChevronUp,
   faArrowUp
-
-
 } from "@fortawesome/free-solid-svg-icons"; //fas fa
 
 import {
@@ -35,11 +32,9 @@ import {
   faYoutube,
   faInstagram,
   faDribbble
- 
 } from "@fortawesome/free-brands-svg-icons"; //fab
 
 import { faCommentAlt } from "@fortawesome/free-regular-svg-icons";
-
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -52,8 +47,6 @@ library.add(
   faChevronRight,
   faChevronUp,
   faArrowUp
- 
-
 ); //fas
 library.add(faCommentAlt); //far
 
@@ -71,15 +64,13 @@ Vue.use(VueScrollTo, {
   container: "body",
   duration: 2000,
   easing: "ease",
-  offset: 0,
-
-})
+  offset: 0
+});
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(BootstrapVue);
 // (Swiper);
 Vue.use(VueAwesomeSwiper);
-
 
 Vue.config.productionTip = false;
 

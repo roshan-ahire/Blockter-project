@@ -1,38 +1,50 @@
 <template>
-    <div>
-        <div class="py-5">
-            <b-container>
-                <div class="card-background mx-3 ">
-                    <b-row>
-                        <b-col md=3 v-for="card in cards" v-bind:key="card.index">
-    
-                            <div>
-                                <b-card overlay :img-src="card.cardimg" img-alt="Card" text-variant="white">
-                                      <b-card-text class="d-flex flex-column justify-content-end">
-                                                <div class="card-img-overlay  d-flex flex-column justify-content-end">
-                                                    <div class="text-warning icon text-left  pl-2">
-                                                        <font-awesome-icon icon="coffee" alt="placeholder" class="iconh" />
-                                                    </div>
-                                                    <div class="text-left">
-                                                        <div class="text-white"><span class=" btn1 ml-3">{{card.btn1}}</span><span class=" btn2">{{card.btn2}} </span> <span class="btn1">{{card.btn3}} </span></div>
-                                                    </div>
-                                                    <div class="text-left">
-                                                        <div class="font-weight-bold pb-3 pl-3 pt-2">
-                                                           {{card.name}}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </b-card-text>
-                                </b-card>
-    
-                            </div>
-    
-                        </b-col>
-                    </b-row>
-                </div>
-            </b-container>
+  <div>
+    <div class="py-5">
+      <b-container>
+        <div class="card-background mx-3 ">
+          <b-row>
+            <b-col md="3" v-for="card in cards" v-bind:key="card.index">
+              <div>
+                <b-card
+                  overlay
+                  :img-src="card.cardimg"
+                  img-alt="Card"
+                  text-variant="white"
+                >
+                  <b-card-text class="d-flex flex-column justify-content-end">
+                    <div
+                      class="card-img-overlay  d-flex flex-column justify-content-end"
+                    >
+                      <div class="text-warning icon text-left  pl-2">
+                        <font-awesome-icon
+                          icon="coffee"
+                          alt="placeholder"
+                          class="iconh"
+                        />
+                      </div>
+                      <div class="text-left">
+                        <div class="text-white">
+                          <span class=" btn1 ml-3">{{ card.btn1 }}</span
+                          ><span class=" btn2">{{ card.btn2 }} </span>
+                          <span class="btn1">{{ card.btn3 }} </span>
+                        </div>
+                      </div>
+                      <div class="text-left">
+                        <div class="font-weight-bold pb-3 pl-3 pt-2">
+                          {{ card.name }}
+                        </div>
+                      </div>
+                    </div>
+                  </b-card-text>
+                </b-card>
+              </div>
+            </b-col>
+          </b-row>
         </div>
+      </b-container>
     </div>
+  </div>
 </template>
 
 <script>
@@ -86,7 +98,6 @@ export default {
 };
 </script>
 
-
 <style lang="scss">
 @import "../assets/scss/_variables.scss";
 .card-background {
@@ -117,6 +128,3 @@ export default {
   }
 }
 </style>
-
-
-

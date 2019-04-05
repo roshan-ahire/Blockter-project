@@ -3,56 +3,60 @@
     <div class="py-5">
       <b-container>
         <div class="card-background mx-3 ">
-    <!-- swiper -->
-    <swiper :options="swiperOption">
-      <swiper-slide v-for="card in cards" v-bind:key="card.index">
-        <b-card overlay :img-src="card.cardimg" img-alt="Card" text-variant="white">
-          <b-card-text class="d-flex flex-column justify-content-end">
-            <div class="card-img-overlay d-flex flex-column justify-content-end">
-              <div class="text-warning icon text-left pl-2">
-                <font-awesome-icon icon="coffee" alt="placeholder" class="iconh"/>
-              </div>
-              <div class="text-left">
-                <div class="text-white">
-                  <span class="btn1 ml-3">{{card.btn1}}</span>
-                  <span class="btn2">{{card.btn2}}</span>
-                  <span class="btn1">{{card.btn3}}</span>
-                </div>
-              </div>
-              <div class="text-left">
-                <div class="font-weight-bold pb-3 pl-3 pt-2">{{card.name}}</div>
-              </div>
-            </div>
-          </b-card-text>
-        </b-card>
-      </swiper-slide>
-
-    
-    </swiper>
-      
+          <!-- swiper -->
+          <swiper :options="swiperOption">
+            <swiper-slide v-for="card in cards" v-bind:key="card.index">
+              <b-card
+                overlay
+                :img-src="card.cardimg"
+                img-alt="Card"
+                text-variant="white"
+              >
+                <b-card-text class="d-flex flex-column justify-content-end">
+                  <div
+                    class="card-img-overlay d-flex flex-column justify-content-end"
+                  >
+                    <div class="text-warning icon text-left pl-2">
+                      <font-awesome-icon
+                        icon="coffee"
+                        alt="placeholder"
+                        class="iconh"
+                      />
+                    </div>
+                    <div class="text-left">
+                      <div class="text-white">
+                        <span class="btn1 ml-3">{{ card.btn1 }}</span>
+                        <span class="btn2">{{ card.btn2 }}</span>
+                        <span class="btn1">{{ card.btn3 }}</span>
+                      </div>
+                    </div>
+                    <div class="text-left">
+                      <div class="font-weight-bold pb-3 pl-3 pt-2">
+                        {{ card.name }}
+                      </div>
+                    </div>
+                  </div>
+                </b-card-text>
+              </b-card>
+            </swiper-slide>
+          </swiper>
         </div>
         <div class="swiper-pagination" slot="pagination"></div>
-         <!-- <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div> -->
-    </b-container>
+        <!-- <div class="swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-button-next" slot="button-next"></div> -->
+      </b-container>
     </div>
   </div>
 </template>
 
 <script>
-import CardImg from "@/components/card-carousel.vue";
 import image1 from "../assets/ant-man.jpg";
 import image2 from "../assets/Iron-Man1.jpg";
 import image3 from "../assets/hulk.jpg";
 import image4 from "../assets/black-panther.jpg";
 import image5 from "../assets/captain-marve.jpg";
-import image6 from "../assets/captain-america.jpg";
-import image7 from "../assets/civil-war.jpg";
 
 export default {
-  components: {
-    CardImg
-  },
   data() {
     return {
       cards: [
@@ -77,7 +81,7 @@ export default {
           btn3: "SIENCE FICTION",
           name: "HULK"
         },
-     
+
         {
           cardimg: image4,
           btn1: "ACAO",
@@ -85,13 +89,13 @@ export default {
           btn3: "FANTASY",
           name: "BLACK PANTHER"
         },
-           {
+        {
           cardimg: image5,
           btn1: "ACAO",
           btn2: "ADVENTURE",
           btn3: "SIENCE FICTION",
           name: "CAPTAIN MARVEL"
-        },
+        }
         //   {
         //   cardimg: image6,
         //   btn1: "ACAO",
@@ -117,24 +121,24 @@ export default {
           el: ".swiper-pagination",
           clickable: true
         },
-          breakpoints: {
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 40
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 30
-            },
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 20
-            },
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 10
-            }
+        breakpoints: {
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 40
           },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          }
+        }
         // autoplay: {
         //   delay: 2500,
         //   disableOnInteraction: false
@@ -175,29 +179,28 @@ export default {
     }
   }
 }
+
 .swiper-pagination {
-    /* position: absolute; */
-    text-align: center;
-    -webkit-transition: 300ms opacity;
-    -o-transition: 300ms opacity;
-    transition: 300ms opacity;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    z-index: 10;
-    float: right;
-    position: relative !important;
-    margin-top: 20px;
-    margin-right: 50px;
-    
+  /* position: absolute; */
+  text-align: center;
+  -webkit-transition: 300ms opacity;
+  -o-transition: 300ms opacity;
+  transition: 300ms opacity;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+  float: right;
+  position: relative !important;
+  margin-top: 20px;
+  margin-right: 50px;
 }
 
 .swiper-pagination-bullet-active {
   opacity: 1;
   /* font-size: 20px; */
-  background: yellow!important;
- 
-
+  background: yellow !important;
 }
+
 .swiper-pagination-bullet {
   width: 11px;
   height: 11px;
@@ -208,8 +211,6 @@ export default {
   opacity: 1;
   position: relative;
   margin-right: 5px;
- 
-
   /* padding-left: 10px; */
 }
 </style>
