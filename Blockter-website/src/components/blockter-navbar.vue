@@ -34,8 +34,9 @@
 </script>
 
 <style lang="scss">
+@import "../assets/scss/_variables.scss";
     .main-navbar {
-        background-color: #020d18;
+        background-color:$navbar-color;
     }
     
     .btn-color {

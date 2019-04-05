@@ -16,7 +16,8 @@ export default {
     
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
+@import "../assets/scss/_variables.scss";
 .footer-back{
   background-color: #020d18;;
   height: 50px;

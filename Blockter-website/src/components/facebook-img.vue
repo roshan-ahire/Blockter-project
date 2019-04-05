@@ -25,6 +25,7 @@ export default {
 }
 </script>
 <style lang="scss">
+@import "../assets/scss/_variables.scss";
 .title-text{
         text-transform: uppercase;
     margin-bottom: 30px;

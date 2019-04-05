@@ -67,6 +67,7 @@
 </script>
 
 <style lang="scss">
+@import "../assets/scss/_variables.scss";
     .main-media {
         img {
             margin-top: 45%;

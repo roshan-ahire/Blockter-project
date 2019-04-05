@@ -50,6 +50,7 @@
 </script>
 
 <style lang="scss">
+@import "../assets/scss/_variables.scss";
     .content-border {
         border: 3px solid black;
         background-color: rgb(30, 42, 66);
@@ -96,4 +97,5 @@
         }
     }
 </style>
+
 

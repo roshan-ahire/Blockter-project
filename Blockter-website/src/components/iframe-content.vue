@@ -112,6 +112,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../assets/scss/_variables.scss";
 .iframe-background {
   background: #06121e !important;
   .view1 {

@@ -100,6 +100,7 @@
 </script>
 
 <style lang="scss">
+@import "../assets/scss/_variables.scss";
     .footer-text {
         color: #8b96a3 !important;
         line-height: 25px;

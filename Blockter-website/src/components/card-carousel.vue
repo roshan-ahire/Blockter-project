@@ -86,7 +86,9 @@ export default {
 };
 </script>
 
+
 <style lang="scss">
+@import "../assets/scss/_variables.scss";
 .card-background {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   padding-right: 20px;

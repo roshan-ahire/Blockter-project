@@ -33,6 +33,7 @@
 </script>
 
 <style lang="scss">
+@import "../assets/scss/_variables.scss";
     .all-content{
  
 margin-top: 100px;

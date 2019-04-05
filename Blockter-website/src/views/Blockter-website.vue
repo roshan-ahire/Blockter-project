@@ -7,7 +7,7 @@
           <span class="small font-weight-bold"> 
                         {{link.name}}
                         </span>
-          <span style="color:#fff" v-if="link.icon">
+          <span v-if="link.icon">
                         <font-awesome-icon :icon="['fas', 'chevron-down']" class="ml-1 small arrow-hover"/>
                       </span>
         </b-nav-item>
@@ -121,11 +121,12 @@
 </script>
 
 <style lang="scss">
+@import "../assets/scss/_variables.scss";
   .main-backgroung {
     background-color: #020d18 !important;
     height: auto;
     .nav-link {
-      color: rgba(255, 255, 255, 0.75) !important;
+      color: $form-text;
     }
     .nav-link:hover {
       color: yellow !important;
