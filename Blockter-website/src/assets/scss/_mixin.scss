@@ -1,0 +1,7 @@
+@mixin title-media ($fontsize){
+    font-weight: bold;
+    color: $title-text;
+    line-height: $line-space;
+    font-size: $fontsize;
+} 
+

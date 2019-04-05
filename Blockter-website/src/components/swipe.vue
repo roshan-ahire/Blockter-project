@@ -165,7 +165,7 @@ export default {
       height: 350px;
     }
     .btn1 {
-      background-color: rgb(245, 3, 52);
+      background-color: $last-text;
       border-radius: 2px;
       padding: 2px;
       font-size: 11px;
@@ -198,7 +198,7 @@ export default {
 .swiper-pagination-bullet-active {
   opacity: 1;
   /* font-size: 20px; */
-  background: yellow !important;
+  background: $circle-color !important;
 }
 
 .swiper-pagination-bullet {

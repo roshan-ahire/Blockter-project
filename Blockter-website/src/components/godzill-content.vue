@@ -85,40 +85,36 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/_variables.scss";
+@import "../assets/scss/_mixin.scss";
+
 .main-media {
   img {
     margin-top: 45%;
     border-radius: 10px;
   }
   .title-1 {
-    font-weight: bold;
-    color: #497dc3;
-    line-height: 27px;
-    font-size: 14px;
+    @include title-media(14px);
   }
   .year-text {
-    color: #8b96a3 !important;
+    color: $para-text !important;
   }
   .text2 {
-    line-height: 27px;
-    color: #8b96a3 !important;
+    line-height: $line-space;
+    color: $para-text !important;
   }
 }
 
-// ******************
+// ****************** tow columns of media
 .textc {
-  color: #8b96a3 !important;
+  color: $para-text !important;
   font-weight: bold;
 }
 
 .title-1 {
-  font-weight: bold;
-  color: #497dc3;
-  line-height: 27px;
-  font-size: 12px;
+  @include title-media(12px);
 }
 
 .year-text {
-  color: #8b96a3 !important;
+  color: $para-text !important;
 }
 </style>

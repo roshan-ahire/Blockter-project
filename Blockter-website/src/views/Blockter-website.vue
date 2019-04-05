@@ -10,7 +10,7 @@
           v-bind:key="link.index"
           v-scroll-to="link.divid"
         >
-          <span class="small font-weight-bold">
+          <span class="small  font-weight-bold">
             {{ link.name }}
           </span>
           <span v-if="link.icon">
@@ -116,7 +116,7 @@ export default {
   background-color: #020d18 !important;
   height: auto;
   .nav-link {
-    color: $form-text;
+    color: $form-text !important;
   }
   .nav-link:hover {
     color: yellow !important;

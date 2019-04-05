@@ -21,7 +21,8 @@ import {
   faSearch,
   faChevronRight,
   faChevronUp,
-  faArrowUp
+  faArrowUp,
+  faEnvelope
 } from "@fortawesome/free-solid-svg-icons"; //fas fa
 
 import {
@@ -46,7 +47,8 @@ library.add(
   faSearch,
   faChevronRight,
   faChevronUp,
-  faArrowUp
+  faArrowUp,
+  faEnvelope
 ); //fas
 library.add(faCommentAlt); //far
 

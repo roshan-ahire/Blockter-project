@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-white py-5">
+    <div class="text-white py-5 one">
       <b-container>
         <b-row>
           <b-col md="3">
@@ -18,7 +18,7 @@
               </div>
             </div>
           </b-col>
-          <b-col md="2">
+          <b-col cols="2">
             <div class="text-left my-5">
               <div class="font-weight-bold pt-4">Resources</div>
               <div class="small pt-4">
@@ -32,7 +32,7 @@
               </div>
             </div>
           </b-col>
-          <b-col md="2">
+          <b-col cols="2">
             <div class="text-left my-5">
               <div class="font-weight-bold pt-4">Legal</div>
               <div class="small pt-4">
@@ -44,7 +44,7 @@
               </div>
             </div>
           </b-col>
-          <b-col md="2">
+          <b-col cols="2">
             <div class="text-left my-5">
               <div class="font-weight-bold pt-4">Account</div>
               <div class="small pt-4">
@@ -65,11 +65,31 @@
                 us
               </div>
               <div class="pt-5 small">
-                <b-form-input
+                <!-- <b-form-input
                   v-model="text"
                   class="inputbox"
                   placeholder="Enter your email"
-                ></b-form-input>
+                ></b-form-input> -->
+
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control inputbox border-right-0"
+                    placeholder="Recipient's username"
+                    aria-label="Recipient's username"
+                    aria-describedby="basic-addon2"
+                  />
+                  <div class="input-group-append">
+                    <span
+                      class="input-group-text inputbox  border-left-0"
+                      id="basic-addon2"
+                    >
+                      <font-awesome-icon
+                        :icon="['fas', 'envelope']"
+                        class="small"
+                    /></span>
+                  </div>
+                </div>
               </div>
               <div class="small pt-3 subscribe-color">
                 SUBSCRIBE NOW
@@ -99,8 +119,14 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/_variables.scss";
+.col-2 {
+  -ms-flex: 0 0 16.666667%;
+  -webkit-box-flex: 0;
+  flex: 0 0 16.666667%;
+  max-width: 40%;
+}
 .footer-text {
-  color: #8b96a3 !important;
+  color: $para-text !important;
   line-height: 25px;
 }
 
@@ -109,7 +135,7 @@ ul {
   padding: 0px;
   list-style: none;
   li {
-    color: #8b96a3 !important;
+    color: $para-text !important;
     line-height: 23px;
   }
 }
@@ -123,8 +149,23 @@ ul {
   font-size: 13px;
   border-radius: 2px !important;
 }
+.inputbox:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #8b96a3;
+  color: white;
+}
+.input-group-append {
+  margin-left: -4px;
+}
 .subscribe-color {
-  color: #dd003f;
+  color: $last-text;
   font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  .one {
+    text-align: none !important;
+    padding-left: 50px;
+  }
 }
 </style>

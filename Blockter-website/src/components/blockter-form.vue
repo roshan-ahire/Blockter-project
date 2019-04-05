@@ -4,10 +4,10 @@
       <div class=" content-border mx-3 ">
         <b-row class="mx-auto">
           <b-col md="2" class="p-0">
-            <div class="d-flex  border-l">
+            <div class="border-l">
               <!-- <div class="text-white pl-2"> MOVIE</div> -->
               <div class="text-white pl-2 pt-1">
-                <b-dropdown
+                <!-- <b-dropdown
                   id="dropdown-1"
                   text="MOVIE"
                   class="m-md-2 droplist"
@@ -17,12 +17,24 @@
                   <b-dropdown-item>Third Action</b-dropdown-item>
                   <b-dropdown-item disabled>Disabled action</b-dropdown-item>
                 </b-dropdown>
-              </div>
-              <div class="ml-auto">
-                <font-awesome-icon
-                  :icon="['fas', 'chevron-down']"
-                  class="small text-white icona"
-                />
+
+                <div class="float-right">
+                  <font-awesome-icon
+                    :icon="['fas', 'chevron-down']"
+                    class="small text-white icona"
+                  />
+                </div> -->
+                <div>
+                  <b-dropdown id="dropdown-1" text="MOVIES" class="m-md-2">
+                    <b-dropdown-item>First Action</b-dropdown-item>
+                    <b-dropdown-item>Second Action</b-dropdown-item>
+                    <b-dropdown-item>Third Action</b-dropdown-item>
+                    <b-dropdown-divider></b-dropdown-divider>
+                    <b-dropdown-item active>Active action</b-dropdown-item>
+                    <b-dropdown-item disabled>Disabled action</b-dropdown-item>
+                  </b-dropdown>
+                </div>
+              
               </div>
             </div>
           </b-col>
@@ -66,24 +78,30 @@ export default {
   background-color: rgb(30, 42, 66);
   .border-l {
     border-right: 1px solid black;
+
     .btn {
       background-color: transparent !important;
       border: transparent;
       outline: none !important;
       font-size: 14px;
       font-weight: bold;
+      position: relative;
+      width: 150px;
+      text-align: left;
     }
     .btn:focus {
       outline: none !important;
       box-shadow: none !important;
     }
-    .dropdown-toggle::after {
-      content: none;
-    }
+
+    // .dropdown-toggle::after {
+    //   content: none;
+    // }
     .icona {
-      margin-top: 22px;
-      margin-right: 10px;
-      color: rgba(255, 255, 255, 0.75) !important;
+      color: $form-text !important;
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
   }
   .bg-color {
@@ -97,11 +115,11 @@ export default {
     box-shadow: none;
   }
   ::placeholder {
-    color: rgba(255, 255, 255, 0.75) !important;
+    color: $form-text !important;
   }
   .icon-size {
     font-size: 25px;
-    color: rgba(255, 255, 255, 0.75) !important;
+    color: $form-text !important;
   }
 }
 </style>

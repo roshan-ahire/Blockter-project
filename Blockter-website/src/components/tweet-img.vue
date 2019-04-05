@@ -34,7 +34,7 @@ export default {
   .circle {
     height: 10px;
     width: 10px;
-    background-color: yellow;
+    background-color: $circle-color;
     border-radius: 50%;
   }
 }
