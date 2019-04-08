@@ -2,36 +2,33 @@
   <div>
     <div class="py-5">
       <b-container>
-        <div class="card-background mx-3 ">
+        <div class="card-background ml-3 pr-3">
           <!-- swiper -->
           <swiper :options="swiperOption">
             <swiper-slide v-for="card in cards" v-bind:key="card.index">
-              <b-card
-                overlay
-                :img-src="card.cardimg"
-                img-alt="Card"
-                text-variant="white"
-              >
+              <b-card class="card-body-content" text-variant="white">
+                <div>
+                  <b-img
+                    :src="card.cardimg"
+                    class="swiper-image"
+                    fluid
+                    alt="Responsive image"
+                  >
+                  </b-img>
+                </div>
+
                 <b-card-text class="d-flex flex-column justify-content-end">
                   <div
-                    class="card-img-overlay d-flex flex-column justify-content-end"
+                    class="card-img-overlay d-flex flex-column justify-content-end text-left"
                   >
-                    <div class="text-warning icon text-left pl-2">
-                      <font-awesome-icon
-                        icon="coffee"
-                        alt="placeholder"
-                        class="iconh"
-                      />
+                    <div class="text-white ml-2">
+                      <span class="btn1  p-1">{{ card.btn1 }}</span>
+                      <span class="btn2 p-1">{{ card.btn2 }}</span>
+                      <span class="btn1 p-1">{{ card.btn3 }}</span>
                     </div>
-                    <div class="text-left">
-                      <div class="text-white">
-                        <span class="btn1 ml-3">{{ card.btn1 }}</span>
-                        <span class="btn2">{{ card.btn2 }}</span>
-                        <span class="btn1">{{ card.btn3 }}</span>
-                      </div>
-                    </div>
-                    <div class="text-left">
-                      <div class="font-weight-bold pb-3 pl-3 pt-2">
+
+                    <div class="font-weight-bold">
+                      <div class=" pb-2 ml-2 pt-2">
                         {{ card.name }}
                       </div>
                     </div>
@@ -116,7 +113,7 @@ export default {
         // direction:"vertical",
 
         slidesPerView: 4,
-        spaceBetween: 30,
+        spaceBetween: 20,
         pagination: {
           el: ".swiper-pagination",
           clickable: true
@@ -153,29 +150,27 @@ export default {
 <style lang="scss">
 @import "../assets/scss/_variables.scss";
 .card-background {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  padding-right: 20px;
-  .card-img-overlay {
-    padding: 5px;
-  }
-  .card {
-    background-color: black;
-    img {
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .card-body-content {
+    background-color: transparent;
+    .swiper-image {
       opacity: 0.6;
-      height: 350px;
+      height: 340px;
+      width: 250px;
     }
     .btn1 {
       background-color: $last-text;
       border-radius: 2px;
-      padding: 2px;
-      font-size: 11px;
+      font-size: 10px;
+      font-weight: bold;
     }
     .btn2 {
       background-color: orangered;
-      padding: 2px;
       border-radius: 2px;
       margin: 3px;
-      font-size: 11px;
+      font-size: 10px;
+      font-weight: bold;
     }
   }
 }
@@ -192,7 +187,7 @@ export default {
   float: right;
   position: relative !important;
   margin-top: 20px;
-  margin-right: 50px;
+  margin-right: 40px;
 }
 
 .swiper-pagination-bullet-active {

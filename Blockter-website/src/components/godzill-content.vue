@@ -10,7 +10,7 @@
             height="100"
             alt="placeholder"
           ></b-img>
-          <div class="text-left pt-5  title-1">
+          <div class="text-left pt-5  title-1-media">
             Godzilla: King Of The Monsters Adds O’Shea Jackson Jr O’Shea Jackson
             Jr O’Shea Jackson Jr
           </div>
@@ -27,11 +27,11 @@
     </div>
     <div class="my-5">
       <b-row>
-        <b-col>
+        <b-col class="pr-0">
           <div class="text-left text-white font-weight-bold ">
             More news on Blockbuster
           </div>
-          <div class="mt-5 title-1 text-left">
+          <div class="mt-5 title-1-content text-left">
             Godzilla: King Of The Monsters Adds O’Shea Jackson Jr O’Shea Jackson
             Jr O’Shea Jackson Jr span
           </div>
@@ -46,7 +46,7 @@
                 class="small text-white"
             /></span>
           </div>
-          <div class="mt-5 title-1 text-left">
+          <div class="mt-5 title-1-content text-left">
             Magnolia Nabs ‘Lucky’ Starring Harry Dean Stanton
           </div>
           <div class="small text-left text-white year-text">1 year ago</div>
@@ -54,15 +54,15 @@
       </b-row>
       <!-- ************ -->
       <b-row>
-        <b-col>
-          <div class="mt-4 title-1 text-left">
+        <b-col class="pr-0">
+          <div class="mt-4 title-1-content text-left">
             ‘Going in Style’ Tops ‘Smurfs: The Lost Village’ at Thursday Box
             Office
           </div>
           <div class="small text-left text-white year-text">1 year ago</div>
         </b-col>
         <b-col>
-          <div class="mt-4 title-1 text-left">
+          <div class="mt-4 title-1-content text-left">
             India’s National Film Awards: ‘Kaasav’ Wins Best Picture
           </div>
           <div class="small text-left text-white year-text">1 year ago</div>
@@ -92,25 +92,25 @@ export default {
     margin-top: 45%;
     border-radius: 10px;
   }
-  .title-1 {
+  .title-1-media {
     @include title-media(14px);
   }
   .year-text {
-    color: $para-text !important;
+    color: $para-text;
   }
   .text2 {
     line-height: $line-space;
-    color: $para-text !important;
+    color: $para-text;
   }
 }
 
 // ****************** tow columns of media
 .textc {
-  color: $para-text !important;
+  color: $para-text;
   font-weight: bold;
 }
 
-.title-1 {
+.title-1-content {
   @include title-media(12px);
 }
 

@@ -8,12 +8,14 @@
           <div class="float-right">
             <a href="#" class="lastlink"> Back to top</a>
             <span>
-              <font-awesome-icon :icon="['fas', 'arrow-up']" class="small"
+              <font-awesome-icon :icon="['fas', 'arrow-up']" class="small ml-1"
             /></span>
           </div>
         </div>
       </b-container>
     </div>
+  
+
   </div>
 </template>
 <script>

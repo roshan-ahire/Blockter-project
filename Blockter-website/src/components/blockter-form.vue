@@ -7,7 +7,7 @@
             <div class="border-l">
               <!-- <div class="text-white pl-2"> MOVIE</div> -->
               <div class="text-white pl-2 pt-1">
-                <!-- <b-dropdown
+                <b-dropdown
                   id="dropdown-1"
                   text="MOVIE"
                   class="m-md-2 droplist"
@@ -23,19 +23,9 @@
                     :icon="['fas', 'chevron-down']"
                     class="small text-white icona"
                   />
-                </div> -->
-                <div>
-                  <b-dropdown id="dropdown-1" text="MOVIES" class="m-md-2">
-                    <b-dropdown-item>First Action</b-dropdown-item>
-                    <b-dropdown-item>Second Action</b-dropdown-item>
-                    <b-dropdown-item>Third Action</b-dropdown-item>
-                    <b-dropdown-divider></b-dropdown-divider>
-                    <b-dropdown-item active>Active action</b-dropdown-item>
-                    <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-                  </b-dropdown>
                 </div>
-              
               </div>
+              <!-- <vue-dropdown :config="config"></vue-dropdown> -->
             </div>
           </b-col>
           <b-col md="10" class="p-0 ">
@@ -62,12 +52,31 @@
 </template>
 
 <script>
+// import VueDropdown from "vue-dynamic-dropdown";
 export default {
   data() {
     return {
-      text: ""
+      text: "",
+      config: {
+        options: [
+          {
+            value: "option 1"
+          },
+          {
+            value: "option 2"
+          },
+          {
+            value: "option 3"
+          }
+        ],
+        prefix: "MOVIES",
+        backgroundColor: "red"
+      }
     };
   }
+  // components: {
+  //   VueDropdown
+  // }
 };
 </script>
 
@@ -83,8 +92,7 @@ export default {
       background-color: transparent !important;
       border: transparent;
       outline: none !important;
-      font-size: 14px;
-      font-weight: bold;
+      // font-size: 14px;
       position: relative;
       width: 150px;
       text-align: left;
@@ -94,9 +102,9 @@ export default {
       box-shadow: none !important;
     }
 
-    // .dropdown-toggle::after {
-    //   content: none;
-    // }
+    .dropdown-toggle::after {
+      content: none;
+    }
     .icona {
       color: $form-text !important;
       position: absolute;
@@ -115,7 +123,7 @@ export default {
     box-shadow: none;
   }
   ::placeholder {
-    color: $form-text !important;
+    color: $form-text;
   }
   .icon-size {
     font-size: 25px;

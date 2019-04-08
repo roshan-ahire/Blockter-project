@@ -9,31 +9,30 @@
                 <div class="text-white">IN THEATER</div>
               </div>
               <!--  -->
-              <div>
-                <div class="py-5">
-                  <div>
-                    <iframe
-                      name="ironman"
-                      width="100%"
-                      height="428"
-                      src="https://www.youtube.com/embed/8hYlB38asDY"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
+
+              <div class="py-5">
+                <div>
+                  <iframe
+                    name="ironman"
+                    width="100%"
+                    height="428"
+                    src="https://www.youtube.com/embed/8hYlB38asDY"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
                 </div>
               </div>
             </b-col>
 
             <b-col md="4" class="p-0">
               <div class="text-right pt-5">
-                <div class="text-white pr-5 small view1">
+                <div class="text-white small view1">
                   VIEW ALL
                   <span>
                     <font-awesome-icon
                       :icon="['fas', 'chevron-right']"
-                      class="small text-white"
+                      class="small"
                     />
                   </span>
                 </div>
@@ -46,10 +45,10 @@
                     v-bind:key="link.index"
                   >
                     <div>
-                      <b-media tag="li" class="my-3 text-white pl-3 effect">
+                      <b-media tag="li" class="my-2 text-white pl-3 effect p-2">
                         <b-img
                           slot="aside"
-                          height="75"
+                          height="73"
                           :src="link.img1"
                           alt="placeholder"
                         ></b-img>
@@ -133,7 +132,7 @@ export default {
 <style lang="scss">
 @import "../assets/scss/_variables.scss";
 .iframe-background {
-  background: #06121e !important;
+  background: #06121e;
   .view1 {
     color: #8b96a3 !important;
   }
@@ -147,7 +146,7 @@ export default {
     height: 100% !important;
   }
   .effect:hover {
-    background-color: #1c395f !important;
+    background-color: #1c395f;
   }
   .decorate {
     text-decoration: none;

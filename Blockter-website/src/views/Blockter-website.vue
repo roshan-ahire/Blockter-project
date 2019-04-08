@@ -28,12 +28,8 @@
           <Formgroup> </Formgroup>
         </div>
         <!-- using component -->
-        <!-- <CardImg>
-                      </CardImg> -->
-        <swiper1 />
-        <!-- <swiper1/> -->
+        <swiper1> </swiper1>
       </div>
-
       <!-- using component -->
       <div id="movies">
         <IframeVideo> </IframeVideo>
@@ -44,13 +40,13 @@
       </div>
       <!-- using component -->
       <div id="news">
-        <div class="footer-poster">
-          <Footer> </Footer>
-        </div>
+        <!-- <div class="footer-poster"> -->
+        <Footer> </Footer>
+        <!-- </div> -->
       </div>
       <!-- using component -->
-
       <Footerlast> </Footerlast>
+      <!--  -->
     </div>
   </div>
 </template>
@@ -113,7 +109,7 @@ export default {
 <style lang="scss">
 @import "../assets/scss/_variables.scss";
 .main-backgroung {
-  background-color: #020d18 !important;
+  background-color: #020d18;
   height: auto;
   .nav-link {
     color: $form-text !important;
@@ -121,20 +117,9 @@ export default {
   .nav-link:hover {
     color: yellow !important;
   }
-  .arrow-hover:hover {
-    color: yellow !important;
-  }
+
   // second background poster
   .background-poster {
-    background: linear-gradient(rgba(1, 1, 17, 0.864), rgba(4, 4, 29, 0.755)),
-      url("../assets/back-poster.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-    background-repeat: repeat-y;
-  }
-  .footer-poster {
     background: linear-gradient(rgba(1, 1, 17, 0.864), rgba(4, 4, 29, 0.755)),
       url("../assets/back-poster.jpg");
     background-repeat: no-repeat;

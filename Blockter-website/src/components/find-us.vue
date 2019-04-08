@@ -33,6 +33,6 @@ export default {
 @import "../assets/scss/_variables.scss";
 .all-content {
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 </style>

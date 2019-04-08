@@ -12,7 +12,7 @@ import VueAwesomeSwiper from "vue-awesome-swiper";
 import { library } from "@fortawesome/fontawesome-svg-core";
 // scroll spy
 var VueScrollTo = require("vue-scrollto");
-
+import VueDropdown from "vue-dynamic-dropdown";
 import {
   faCaretDown,
   faTh,
@@ -73,6 +73,7 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.use(BootstrapVue);
 // (Swiper);
 Vue.use(VueAwesomeSwiper);
+Vue.use(VueDropdown);
 
 Vue.config.productionTip = false;
 

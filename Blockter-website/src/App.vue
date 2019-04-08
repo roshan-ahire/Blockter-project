@@ -28,4 +28,13 @@
     }
   }
 }
+
+.card-background
+  .swiper-container
+  .swiper-wrapper
+  .swiper-slide
+  .card
+  .card-body {
+  padding: 0px;
+}
 </style>
