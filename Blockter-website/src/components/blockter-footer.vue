@@ -11,7 +11,7 @@
                 </figure>
                 <div class="pt-4 footer-text small">
                   5th Avenue st, manhattan<br />
-                  New York, NY 10001
+                  New Yohrk, NY 10001
                 </div>
                 <div class="pt-4 ">
                   <span class="small footer-text">Call us:</span> (+01) 202 342
