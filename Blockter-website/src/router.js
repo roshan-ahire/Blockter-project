@@ -18,6 +18,12 @@ export default new Router({
       import(/* webpackChunkName: "about" */ "./views/Blockter-website.vue")
     },
     {
+      path: "/example",
+      name: "example",
+      component: () =>
+      import(/* webpackChunkName: "about" */ "./views/example.vue")
+    },
+    {
       path: "/about",
       name: "about",
       // route level code-splitting

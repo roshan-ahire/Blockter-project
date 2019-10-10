@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
+    <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>|
-       <router-link to="/Blockter-website"> Blockter-website</router-link>
+       <router-link to="/Blockter-website"> Blockter-website</router-link>|
+       <router-link to="/example">example</router-link>
      
-    </div> -->
+    </div>
     <router-view />
   </div>
 </template>
@@ -38,3 +39,29 @@
   padding: 0px;
 }
 </style>
+<script>
+export default {
+    // lists: [
+    //     {
+    //       name: "roshan",
+    //       rollNo: "1",
+    //       address: "bhandup"
+    //     },
+    //        {
+    //       name: "kiran",
+    //       rollNo: "2",
+    //       address: "mulund"
+    //     },
+    //        {
+    //       name: "vicky",
+    //       rollNo: "3",
+    //       address: "vikroli"
+    //     },
+    //        {
+    //       name: "dole",
+    //       rollNo: "4",
+    //       address: "thane"
+    //     }
+    //   ]
+}
+</script>
