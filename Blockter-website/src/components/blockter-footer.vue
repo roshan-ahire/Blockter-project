@@ -119,7 +119,7 @@
 
         <button v-on:click="clickButton()" class="btn btn-primary">click here</button>
         <h2
-          :class="{'blue': toggled === true, 'green': toggled === false}"
+          :class="{'blue': toggled === true}"
           class="red-back mt-2"
         >color change</h2>
         <input
