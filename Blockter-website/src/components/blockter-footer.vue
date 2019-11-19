@@ -91,10 +91,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="small pt-3">
+                <div v-for="list in lists" v-bind:key="list.index" class="small pt-3">
                   <a href="#" class="subscribe-color">SUBSCRIBE NOW</a>
                   <h1>{{name}}</h1>
-                  {{lists}}
+                  {{list.name}}
                   <span>
                     <font-awesome-icon
                       :icon="['fas', 'chevron-right']"
@@ -142,7 +142,7 @@
 
 <script>
 export default {
-  props: ["name", "lists"],
+  props: [ "lists"],
   data() {
     return {
       text: "",
