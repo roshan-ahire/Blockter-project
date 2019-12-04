@@ -91,10 +91,9 @@
                     </div>
                   </div>
                 </div>
-                <div v-for="list in lists" v-bind:key="list.index" class="small pt-3">
+                <div class="small pt-3">
                   <a href="#" class="subscribe-color">SUBSCRIBE NOW</a>
-                  <h1>{{name}}</h1>
-                  {{list.name}}
+
                   <span>
                     <font-awesome-icon
                       :icon="['fas', 'chevron-right']"
@@ -104,7 +103,6 @@
                 </div>
               </div>
               <div>
-                list
                 <!-- <h2 v-for="list in lists" :key="list">
                   {{list.name}}
                   {{list.rollNo}}
@@ -114,7 +112,7 @@
           </b-row>
         </b-container>
       </div>
-      <div class="border border-danger">
+      <!-- <div class="border border-danger">
         <h3 class="text-white">* it is a toggle button</h3>
 
         <button v-on:click="clickButton()" class="btn btn-primary">click here</button>
@@ -135,14 +133,14 @@
         <h3 class="text-white">* it is a one click button</h3>
         <button v-on:click="clickbtn()" class="btn btn-primary">click here</button>
         <h1 :class="{'text-red':colorChange === true}" class="text-white">hellow roshan</h1>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: [ "lists"],
+  props: ["lists"],
   data() {
     return {
       text: "",
@@ -158,14 +156,14 @@ export default {
       console.log("red");
       this.colorChange = true;
     }
-  },
+  }
   // computed:{
   //       function myfunction() {
   //       if (
   //         document.documentElement.scrollTop > "150" ||
   //         document.body.scrollTop > "150"
-  //       ) 
-        
+  //       )
+
   //       {
   //         document.getElementById("mainnav").style.background =
   //           "rgba(0,0,0,0.9)";
@@ -184,8 +182,6 @@ export default {
   //       }
   //     }
   // }
-
-  
 };
 </script>
 
