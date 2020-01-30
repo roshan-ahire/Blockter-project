@@ -10,42 +10,37 @@
           v-bind:key="link.index"
           v-scroll-to="link.divid"
         >
-          <span class="small  font-weight-bold">
-            {{ link.name }}
-          </span>
+          <span class="small font-weight-bold">{{ link.name }}</span>
           <span v-if="link.icon">
-            <font-awesome-icon
-              :icon="['fas', 'chevron-down']"
-              class="ml-1 small arrow-hover"
-            />
+            <font-awesome-icon :icon="['fas', 'chevron-down']" class="ml-1 small arrow-hover" />
           </span>
         </b-nav-item>
       </Navbar>
       <!-- background image start -->
-      <div class=" background-poster pb-5">
+      <div class="background-poster pb-5">
         <!-- using component -->
         <div id="home">
-          <Formgroup> </Formgroup>
+          <Formgroup></Formgroup>
         </div>
         <!-- using component -->
-        <swiper1> </swiper1>
+        <swiper1></swiper1>
       </div>
       <!-- using component -->
       <div id="movies">
-        <IframeVideo> </IframeVideo>
+        <IframeVideo></IframeVideo>
       </div>
       <!-- using component -->
       <div id="tvshows">
-        <Findus> </Findus>
+        <Findus></Findus>
       </div>
       <!-- using component -->
       <div id="news">
-        <!-- <div class="footer-poster"> -->
-        <Footer> </Footer>
-        <!-- </div> -->
+        <div class="footer-poster">
+          <Footer v-bind:lists="lists"></Footer>
+        </div>
       </div>
       <!-- using component -->
-      <Footerlast> </Footerlast>
+      <Footerlast name="roshan"></Footerlast>
       <!--  -->
     </div>
   </div>
@@ -63,6 +58,28 @@ import Footerlast from "@/components/footer-last.vue";
 export default {
   data() {
     return {
+      lists: [
+        {
+          name: "roshan",
+          rollNo: "1",
+          address: "bhandup"
+        },
+        {
+          name: "kiran",
+          rollNo: "2",
+          address: "mulund"
+        },
+        {
+          name: "vicky",
+          rollNo: "3",
+          address: "vikroli"
+        },
+        {
+          name: "dole",
+          rollNo: "4",
+          address: "thane"
+        }
+      ],
       navlinks: [
         {
           name: "HOME",
