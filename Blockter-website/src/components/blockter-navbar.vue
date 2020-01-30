@@ -1,12 +1,18 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" class=" main-navbar">
+    <b-navbar toggleable="lg" type="dark" class="main-navbar">
       <b-container>
         <b-navbar>
           <b-navbar-brand href="#">
             <img src="../assets/logo.png" alt="logo" />
           </b-navbar-brand>
         </b-navbar>
+
+        <div :class="{ change: $store.state.hamburger }" class="hamburger" @click="hamburgerChange">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
 
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -17,9 +23,7 @@
 
           <!-- Right aligned button-->
           <b-navbar-nav class="ml-auto">
-            <b-button size="sm" class="rounded-pill font-weight-bold btn-color"
-              >LOG IN</b-button
-            >
+            <b-button size="sm" class="rounded-pill font-weight-bold btn-color">LOG IN</b-button>
           </b-navbar-nav>
         </b-collapse>
       </b-container>
@@ -28,7 +32,26 @@
 </template>
 
 <script>
-export default {};
+import Vue from "vue";
+import Vuex from "vuex";
+import { mapMutations } from "vuex";
+export default {
+  data() {
+    return {
+      Hamburger: false
+    };
+  },
+  methods: {
+    ...mapMutations({
+      hamburgerChange: "changeHamburger"
+    })
+    // myFunction(){
+    //   console.log("kkkkkkkkkkk",this.Hamburger)
+    //   this.Hamburger= !this.Hamburger;
+
+    // }
+  }
+};
 </script>
 
 <style lang="scss">
@@ -44,5 +67,28 @@ export default {};
 
 .btn-color:hover {
   background-color: #dd003f !important;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 </style>

@@ -3,22 +3,10 @@
 
 <template>
   <div class="cartmainPage">
-    <div class="blogfirst open-sans">
-      <!-- Breadcrumb Options Section  -->
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <!-- Home Option  -->
-          <li class="breadcrumb-item">
-            <nuxt-link to="/#" class="compare-products">Home</nuxt-link>
-          </li>
-          <!-- My Wishlist Option  -->
-          <li class="breadcrumb-item">
-            <nuxt-link to="/#" class="compare-products">My Wishlist</nuxt-link>
-          </li>
-        </ol>
-      </nav>
-    </div>
-    <div>
+    <Navbar></Navbar>
+    <side></side>
+  
+    <div :class="{'pad-left': $store.state.hamburger }"  class="content">
       <div class="wishlist-part p-2">
         <!-- wishlist-part Heading  -->
         <div class="text-white text-center">
@@ -97,10 +85,17 @@
 
 <script>
 import addBagModal from "@/components/open-modal.vue";
+import Navbar from "@/components/blockter-navbar.vue";
+import side from "@/components/sidenav.vue";
+import Vue from "vue";
+import Vuex from "vuex";
+import { mapMutations } from "vuex";
 
 export default {
   components: {
-    addBagModal
+    addBagModal,
+    Navbar,
+    side 
   },
   data() {
     return {
@@ -128,7 +123,12 @@ export default {
         }
       ]
     };
-  }
+  },
+    methods: {
+    ...mapMutations({
+      hamburgerChange: "changeHamburger"
+    }),
+    }
 };
 </script>
 
@@ -136,6 +136,14 @@ export default {
 $dark-grey: gray;
 $white: white;
 $light-grey: lightgray;
+.content{
+  padding-left:260px;
+   transition: 0.5s;
+}
+.pad-left{
+      padding-left:0 !important;
+       transition: 0.5s;
+    }
 .amountsize {
   margin-bottom: 5px;
 }
@@ -171,6 +179,7 @@ $light-grey: lightgray;
     .mybagtbtn {
       color: $white;
     }
+    
   }
 }
 .sign-content {

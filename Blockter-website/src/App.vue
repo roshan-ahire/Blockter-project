@@ -4,7 +4,7 @@
       <router-link to="/">Home</router-link>|
       <router-link to="/about">About</router-link>|
       <router-link to="/Blockter-website">Blockter-website</router-link>|
-      <router-link to="/example">example</router-link>
+      <router-link to="/example">example</router-link> |
       <router-link to="/new-modal-page">new-modal-page</router-link>
     </div>
     <router-view />

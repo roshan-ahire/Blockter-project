@@ -4,7 +4,14 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    hamburger: false,
+  },
+  mutations: {
+    changeHamburger(state) {
+   console.log("kkkkksksksk",state.hamburger)
+      state.hamburger = !state.hamburger;
+    }
+  },
   actions: {}
 });
