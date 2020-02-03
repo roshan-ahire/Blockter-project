@@ -56,6 +56,15 @@ import Footer from "@/components/blockter-footer.vue";
 import Footerlast from "@/components/footer-last.vue";
 
 export default {
+  components: {
+    Navbar,
+    Formgroup,
+    IframeVideo,
+    swiper1,
+    Findus,
+    Footer,
+    Footerlast
+  },
   data() {
     return {
       lists: [
@@ -109,16 +118,6 @@ export default {
         }
       ]
     };
-  },
-
-  components: {
-    Navbar,
-    Formgroup,
-    IframeVideo,
-    swiper1,
-    Findus,
-    Footer,
-    Footerlast
   }
 };
 </script>

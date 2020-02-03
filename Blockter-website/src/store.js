@@ -5,12 +5,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    hamburger: false,
+    hamburger: false
   },
+
   mutations: {
-    changeHamburger(state) {
-   console.log("kkkkksksksk",state.hamburger)
-      state.hamburger = !state.hamburger;
+    changeHamburger(state, value) {
+      state.hamburger = !value;
+      console.log("kkkkksksksk", state.hamburger, value);
     }
   },
   actions: {}

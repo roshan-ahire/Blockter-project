@@ -126,7 +126,7 @@ export default {
   },
     methods: {
     ...mapMutations({
-      hamburgerChange: "changeHamburger"
+      hamburgerChange: "changeHamburger(value)"
     }),
     }
 };

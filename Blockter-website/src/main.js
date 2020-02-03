@@ -7,12 +7,21 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 // require styles css
 import "swiper/dist/css/swiper.css";
+
 // import Swiper from "vue-swiper";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import { library } from "@fortawesome/fontawesome-svg-core";
+
+// vue-vuelidate
+import Vuelidate from "vuelidate";
+Vue.use(Vuelidate);
+
 // scroll spy
 var VueScrollTo = require("vue-scrollto");
+
+// VueDropdown
 import VueDropdown from "vue-dynamic-dropdown";
+
 import {
   faCaretDown,
   faTh,
@@ -22,7 +31,9 @@ import {
   faChevronRight,
   faChevronUp,
   faArrowUp,
-  faEnvelope
+  faEnvelope,
+  faEye,
+  faEyeSlash
 } from "@fortawesome/free-solid-svg-icons"; //fas fa
 
 import {
@@ -33,6 +44,7 @@ import {
   faYoutube,
   faInstagram,
   faDribbble
+
 } from "@fortawesome/free-brands-svg-icons"; //fab
 
 import { faCommentAlt } from "@fortawesome/free-regular-svg-icons";
@@ -48,7 +60,9 @@ library.add(
   faChevronRight,
   faChevronUp,
   faArrowUp,
-  faEnvelope
+  faEnvelope,
+  faEye,
+  faEyeSlash
 ); //fas
 library.add(faCommentAlt); //far
 

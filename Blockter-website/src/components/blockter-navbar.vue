@@ -7,8 +7,12 @@
             <img src="../assets/logo.png" alt="logo" />
           </b-navbar-brand>
         </b-navbar>
-
-        <div :class="{ change: $store.state.hamburger }" class="hamburger" @click="hamburgerChange">
+        {{$store.state}}
+        <div
+          :class="{ change: $store.state.hamburger }"
+          class="hamburger"
+          @click="hamburgerChange($store.state.hamburger )"
+        >
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>
@@ -38,7 +42,7 @@ import { mapMutations } from "vuex";
 export default {
   data() {
     return {
-      Hamburger: false
+      Hamburger: $store.state.hamburger
     };
   },
   methods: {

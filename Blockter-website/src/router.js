@@ -11,23 +11,29 @@ export default new Router({
       name: "home",
       component: Home
     },
-      {
+    {
       path: "/Blockter-website",
       name: "Blockter-website",
       component: () =>
-      import(/* webpackChunkName: "about" */ "./views/Blockter-website.vue")
+        import(/* webpackChunkName: "about" */ "./views/Blockter-website.vue")
     },
     {
       path: "/example",
       name: "example",
       component: () =>
-      import(/* webpackChunkName: "about" */ "./views/example.vue")
+        import(/* webpackChunkName: "about" */ "./views/example.vue")
     },
     {
       path: "/new-modal-page",
       name: "new-modal-page",
       component: () =>
-      import(/* webpackChunkName: "about" */ "./views/new-modal-page.vue")
+        import(/* webpackChunkName: "about" */ "./views/new-modal-page.vue")
+    },
+    {
+      path: "/login-page",
+      name: "login-page",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/login-page.vue")
     },
     {
       path: "/about",
